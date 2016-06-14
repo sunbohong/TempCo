@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VKH-sq-g6e">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ZonaPro-Thin.otf">
+            <string>ZonaPro-Thin</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="euV-pN-RSZ">
+            <objects>
+                <viewController id="VKH-sq-g6e" customClass="ViewController" customModule="TempCo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X6e-e3-qZD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bud-Yh-Q0g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sms-I1-seB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="BPB-kM-gKE" customClass="KaedeTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="98" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="0.3519127155172414" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="oLH-YI-4Ji"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="JaG-2y-Jzu">
+                                <rect key="frame" x="20" y="256" width="560" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="486311334.109047">
+                                    <!--2016-05-30 14:28:54 +0000-->
+                                </date>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHs-cq-PDT">
+                                <rect key="frame" x="20" y="495" width="560" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="I9a-TZ-au9"/>
+                                </constraints>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addContact:" destination="VKH-sq-g6e" eventType="touchUpInside" id="W2i-uD-Hfc"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Phone" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="4oB-rV-TAh" customClass="KaedeTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="169" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wts-KG-TPy"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEMPCO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9c-LQ-htl">
+                                <rect key="frame" x="240" y="28" width="120" height="27"/>
+                                <fontDescription key="fontDescription" name="ZonaPro-Thin" family="Zona Pro" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BPB-kM-gKE" firstAttribute="trailing" secondItem="Sms-I1-seB" secondAttribute="trailingMargin" id="7no-5g-0hA"/>
+                            <constraint firstItem="BPB-kM-gKE" firstAttribute="trailing" secondItem="4oB-rV-TAh" secondAttribute="trailing" id="IUC-3e-sw5"/>
+                            <constraint firstItem="K9c-LQ-htl" firstAttribute="centerX" secondItem="BPB-kM-gKE" secondAttribute="centerX" id="Ngx-Zp-Bv2"/>
+                            <constraint firstItem="BPB-kM-gKE" firstAttribute="top" secondItem="K9c-LQ-htl" secondAttribute="bottom" constant="43" id="Pex-6m-BLz"/>
+                            <constraint firstItem="4oB-rV-TAh" firstAttribute="top" secondItem="BPB-kM-gKE" secondAttribute="bottom" constant="41" id="Uq1-uo-Nbh"/>
+                            <constraint firstItem="Bud-Yh-Q0g" firstAttribute="top" secondItem="aHs-cq-PDT" secondAttribute="bottom" constant="45" id="WtH-J2-u4n"/>
+                            <constraint firstItem="4oB-rV-TAh" firstAttribute="leading" secondItem="JaG-2y-Jzu" secondAttribute="leading" id="YPQ-aN-xtF"/>
+                            <constraint firstItem="BPB-kM-gKE" firstAttribute="leading" secondItem="Sms-I1-seB" secondAttribute="leadingMargin" id="gmo-Fu-Y4M"/>
+                            <constraint firstItem="JaG-2y-Jzu" firstAttribute="leading" secondItem="aHs-cq-PDT" secondAttribute="leading" id="jQP-Fz-yex"/>
+                            <constraint firstItem="JaG-2y-Jzu" firstAttribute="trailing" secondItem="aHs-cq-PDT" secondAttribute="trailing" id="pYR-br-eiC"/>
+                            <constraint firstItem="K9c-LQ-htl" firstAttribute="top" secondItem="X6e-e3-qZD" secondAttribute="bottom" constant="8" symbolic="YES" id="uui-Bx-gmh"/>
+                            <constraint firstItem="BPB-kM-gKE" firstAttribute="leading" secondItem="4oB-rV-TAh" secondAttribute="leading" id="yc1-rB-mjk"/>
+                            <constraint firstItem="aHs-cq-PDT" firstAttribute="top" secondItem="JaG-2y-Jzu" secondAttribute="bottom" constant="23" id="ysi-jb-hAY"/>
+                            <constraint firstItem="4oB-rV-TAh" firstAttribute="trailing" secondItem="JaG-2y-Jzu" secondAttribute="trailing" id="zuj-xo-oY9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addContactButton" destination="aHs-cq-PDT" id="0FF-mP-4og"/>
+                        <outlet property="deadlinePicker" destination="JaG-2y-Jzu" id="zbn-R0-JXe"/>
+                        <outlet property="nameField" destination="BPB-kM-gKE" id="wdi-Bd-e22"/>
+                        <outlet property="phoneField" destination="4oB-rV-TAh" id="0aA-MO-zAI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eoI-YT-FLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818" y="380"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,15 @@
+PODS:
+  - JSSAlertView (1.1.4)
+  - TextFieldEffects (1.2.0)
+
+DEPENDENCIES:
+  - JSSAlertView
+  - TextFieldEffects
+
+SPEC CHECKSUMS:
+  JSSAlertView: f42fc4be811925cef72ea808746df5a6c27eb356
+  TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
+
+PODFILE CHECKSUM: 577383b0e5244320d67cb0743fbf9c2eeffdb78c
+
+COCOAPODS: 1.0.0

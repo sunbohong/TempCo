@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if identifier == DELETECONTACT {
             print("delete action - tapped")
             
-            NSNotificationCenter.defaultCenter().postNotificationName(DELETECONTACT, object: nil)
+            NSNotificationCenter.defaultCenter().postNotificationName(DELETECONTACT, object: notification.userInfo)
             
         }else if identifier == KEEPCONTACT {
             print("keep action - tapped")

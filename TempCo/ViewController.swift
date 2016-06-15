@@ -129,10 +129,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 
                 alertview.setTextTheme(.Light)
                     
-                    let userInfo = ["url" : "Hello"]
+                    let userInfo = ["url" : "Hello", "name" : nameField.text!]
                     
                     //Set notification
-                    LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey("TempCo", title: "see options(left)", message:nameField.text!+"Your contact needs to be deleted!", date: deadlinePicker.date, userInfo: userInfo)
+                    LocalNotificationHelper.sharedInstance().scheduleNotificationWithKey("TempCo", title: "see options(left)", message:nameField.text!+" Your contact needs to be deleted!", date: deadlinePicker.date, userInfo: userInfo)
                     
                 }
 
@@ -163,10 +163,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //**DELETE CONTACT FUNCTION**\\
     func contactDelete(notification : NSNotification){
-        var contacts = defaults.objectForKey("key") as? [String] ?? [String]()
-        let predicate = CNContact.predicateForContactsMatchingName(contacts[0])
-        contacts.removeAtIndex(0)
-        
+
+        let name = notification.object!["name"] as? String
+
+        guard (name != nil) else{
+            return
+        }
+
+        let contacts:NSMutableArray = NSMutableArray(array: defaults.objectForKey("key") as? [String] ?? [String]())
+        let predicate = CNContact.predicateForContactsMatchingName(name!)
+        contacts.removeObject(name!);
+
         
         let toFetch = [CNContactEmailAddressesKey]
         

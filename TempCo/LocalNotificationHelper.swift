@@ -36,7 +36,7 @@ class LocalNotificationHelper: NSObject {
     }
     
     func scheduleNotificationWithKey(key: String, title: String, message: String, date: NSDate, userInfo: [NSObject: AnyObject]?){
-        let notification = notificationWithTitle(key, title: title, message: message, date: date, userInfo: ["key": key], soundName: nil, hasAction: true)
+        let notification = notificationWithTitle(key, title: title, message: message, date: date, userInfo: userInfo, soundName: nil, hasAction: true)
         notification.category = LOCAL_NOTIFICATION_CATEGORY
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
